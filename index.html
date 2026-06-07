@@ -1,656 +1,1040 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Shambhu Lal Verma</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <style>
-      a {
-        color: #2287c9;
-        text-decoration: underline;
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Shambhu Lal Verma - Senior Full Stack Developer</title>
+  <meta name="description"
+    content="Senior Full Stack Developer in Bangalore with 13+ years of experience across Node.js, React, TypeScript, cloud platforms, microservices, and technical leadership." />
+  <meta name="keywords"
+    content="Shambhu Lal Verma, Senior Full Stack Developer, Node.js, React.js, TypeScript, Software Engineer, Cloud, Microservices" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101820" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css" />
+  <style>
+    :root {
+      --ink: #101820;
+      --ink-soft: #27323a;
+      --paper: #fbfaf7;
+      --surface: #ffffff;
+      --line: #e3dfd7;
+      --muted: #667174;
+      --teal: #007f7a;
+      --teal-soft: #d9f0ee;
+      --rust: #b9562f;
+      --gold: #d9a441;
+      --green: #3c8d5a;
+      --shadow: 0 24px 80px rgba(16, 24, 32, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        linear-gradient(180deg, rgba(217, 240, 238, 0.7) 0, rgba(251, 250, 247, 0) 520px),
+        var(--paper);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 56px;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .nav-links a,
+    .social-link,
+    .action-link {
+      border-radius: var(--radius);
+      transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a {
+      padding: 9px 11px;
+    }
+
+    .nav-links a:hover,
+    .social-link:hover {
+      background: rgba(0, 127, 122, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 28px;
+      align-items: stretch;
+      min-height: 500px;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100%;
+      padding: 46px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.74);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      color: var(--rust);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--rust);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(3rem, 7vw, 4.95rem);
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 0.95;
+    }
+
+    .headline {
+      max-width: 690px;
+      margin: 24px 0 0;
+      color: var(--ink-soft);
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 18px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .action-link i {
+      margin-right: 8px;
+    }
+
+    .action-link.primary {
+      background: var(--ink);
+      color: white;
+    }
+
+    .action-link:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      transform: translateY(-1px);
+    }
+
+    .action-link.primary:hover {
+      background: var(--teal);
+      color: white;
+    }
+
+    .hero-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-wrap {
+      position: relative;
+      height: 326px;
+      background: linear-gradient(135deg, var(--teal-soft), #f4ead8);
+    }
+
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      inset: auto 28px 0;
+      height: 72px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.88));
+      pointer-events: none;
+    }
+
+    .portrait {
+      width: 100%;
+      height: 326px;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .hero-details {
+      padding: 28px;
+    }
+
+    .role {
+      margin: 0 0 16px;
+      color: var(--ink);
+      font-size: 1.3rem;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .contact-list,
+    .socials,
+    .clean-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .contact-list i {
+      width: 20px;
+      margin-right: 8px;
+      color: var(--teal);
+      text-align: center;
+    }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .social-link {
+      display: flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 1.1rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--ink);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .main-stack,
+    .side-stack {
+      display: grid;
+      gap: 28px;
+    }
+
+    .panel {
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .side-stack {
+      position: sticky;
+      top: 20px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      color: var(--ink);
+      font-size: clamp(1.55rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 1.1;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.08rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .summary p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 1.03rem;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .focus-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: var(--radius);
+      background: #f4f8f7;
+      color: var(--ink-soft);
+      font-weight: 700;
+    }
+
+    .focus-list i {
+      width: 22px;
+      color: var(--green);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .impact-card {
+      min-height: 190px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fffdf9;
+    }
+
+    .impact-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: var(--radius);
+      background: var(--teal-soft);
+      color: var(--teal);
+      font-size: 1.1rem;
+    }
+
+    .impact-card:nth-child(2) .impact-icon {
+      background: #f6e6d8;
+      color: var(--rust);
+    }
+
+    .impact-card:nth-child(3) .impact-icon {
+      background: #eef2dc;
+      color: var(--green);
+    }
+
+    .impact-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 12px;
+      width: 2px;
+      background: var(--line);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      padding-left: 38px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 5px;
+      width: 16px;
+      height: 16px;
+      border: 4px solid var(--surface);
+      border-radius: 50%;
+      background: var(--teal);
+      box-shadow: 0 0 0 1px var(--line);
+    }
+
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .company {
+      color: var(--rust);
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    .stack-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 2px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #faf8f2;
+      color: var(--ink-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .chip.teal {
+      border-color: rgba(0, 127, 122, 0.2);
+      background: var(--teal-soft);
+      color: #00635f;
+    }
+
+    .skill-group {
+      display: grid;
+      gap: 9px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .skill-group:first-of-type {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .skill-group h3 {
+      font-size: 0.96rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .clean-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .clean-list li {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .clean-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .item-title {
+      display: block;
+      color: var(--ink);
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .item-meta {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 650;
+      line-height: 1.4;
+    }
+
+    .strength-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .strength-list i {
+      width: 22px;
+      margin-top: 3px;
+      color: var(--gold);
+      text-align: center;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 28px;
+      padding: 22px 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .footer a {
+      color: var(--teal);
+      font-weight: 800;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .content-grid,
+      .summary {
+        grid-template-columns: 1fr;
       }
 
-      a:active {
-        color: #2287c9;
-        text-decoration: underline;
+      .hero-copy {
+        padding: 36px;
       }
 
-      a:visited {
-        color: #2287c9;
-        text-decoration: underline;
+      .metrics,
+      .impact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      a:hover {
-        color: #339900;
-        text-decoration: underline;
+      .side-stack {
+        position: static;
       }
-    </style>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link id="theme-style" rel="stylesheet" href="assets/css/pillar-1.css" />
-    <base target="_blank" />
-  </head>
+    }
 
-  <body>
-    <article class="resume-wrapper text-center position-relative">
-      <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-        <header class="resume-header pt-4 pt-md-0">
-          <div class="media flex-column flex-md-row">
-            <a href="https://slverma.in/"
-              ><img
-                src="assets/image/profile.jpg"
-                alt="image"
-                width="220"
-                height="220"
-            /></a>
-            <div
-              class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0"
-            >
-              <div class="primary-info">
-                <h1
-                  class="name mt-0 mb-1 text-white text-uppercase text-uppercase"
-                >
-                  Shambhu Lal Verma
-                </h1>
-                <div class="title mb-3">Full Stack Developer</div>
-                <ul class="list-unstyled">
-                  <li class="mb-2">
-                    <i
-                      class="fa fa-envelope fa-fw mr-2"
-                      data-fa-transform="grow-3"
-                    ></i
-                    >developer.sham@gmail.com
-                  </li>
-                  <li class="mb-2">
-                    <i
-                      class="fa fa-map-marker fa-fw mr-2"
-                      data-fa-transform="grow-3"
-                    ></i
-                    >Bangalore, India
-                  </li>
-                </ul>
-              </div>
-              <div class="secondary-info ml-md-auto mt-2">
-                <ul class="resume-social list-unstyled">
-                  <li class="mb-3">
-                    <a href="https://www.linkedin.com/in/slverma/"
-                      ><span class="fa-container text-center mr-2"
-                        ><i class="fa fa-linkedin" aria-hidden="true"></i></span
-                      >slverma</a
-                    >
-                  </li>
-                  <li class="mb-3">
-                    <a href="https://github.com/vermaslal/"
-                      ><span class="fa-container text-center mr-2"
-                        ><i class="fa fa-github fa-fw"></i></span
-                      >vermaslal</a
-                    >
-                  </li>
-                  <li class="mb-3">
-                    <a href="https://twitter.com/vermaslal"
-                      ><span class="fa-container text-center mr-2"
-                        ><i class="fa fa-twitter fa-fw"></i></span
-                      >vermaslal</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </header>
-        <div class="resume-body p-5">
-          <section class="resume-section summary-section mb-5">
-            <h2
-              class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-            >
-              Profile
-            </h2>
-            <div class="resume-section-content">
-              <p class="mb-0">
-                Accomplished Full Stack Developer with over 11 years of
-                experience in designing, developing, and deploying robust web
-                applications. Proficient in modern technologies including
-                Node.js, React.js and both back-end and front-end development.
-                Expert in managing databases such as MongoDB, PostgreSQL, MySQL.
-                Adept at leading projects from concept to deployment, ensuring
-                seamless integration, optimal performance, and enhanced user
-                experience. Demonstrated ability to work in fat-paced
-                environments and collaborate effectively with cross-functional
-                teams to deliver high-quality solutions.
-              </p>
-            </div>
-          </section>
-          <div class="row">
-            <div class="col-lg-9">
-              <section class="resume-section experience-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Experience
-                </h2>
-                <div class="resume-section-content">
-                  <div class="resume-timeline position-relative">
-                    <article
-                      class="resume-timeline-item position-relative pb-5"
-                    >
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            Specialist - Software Engineering,
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            LTIMindtree
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          September 2021 — Present
-                        </div>
-                      </div>
-                      <!--//resume-timeline-item-header-->
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            <p>
-                              Developing an application that leverages the power
-                              of machine learning and generative AI to transform
-                              how organizations handle incidents. By automating
-                              processes and providing actionable insights, the
-                              system not only enhances operational efficiency
-                              but also fosters a proactive approach to incident
-                              management, ensuring a safer and more reliable
-                              environment.
-                            </p>
-                            <p>
-                              <b>Tech Stack:</b> Node Js, React Js, Ant Design,
-                              CI/CD, Azure (Function App, Web App, KeyVault)
-                            </p>
-                          </li>
-                          <li>
-                            <p>
-                              Worked on a Telematics project that enables fleet
-                              managers to monitor their vehicles and drivers
-                              like never before.
-                            </p>
-                            <p>
-                              <b>Tech Stack:</b> Node Js, React Js, GraphQL,
-                              PostgreSQL, Next Js, Azure
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
+    @media (max-width: 720px) {
+      .page {
+        width: min(100% - 22px, 1180px);
+        padding-top: 16px;
+      }
 
-                    <article
-                      class="resume-timeline-item position-relative pb-5"
-                    >
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            Project Lead (Full Stack Developer),
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            Kabra Logitech Pvt. Ltd.
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          April 2020 — September 2021
-                        </div>
-                      </div>
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            <p>
-                              Designed and developed REST APIs and Web apps for
-                              logistics ERP. This ERP software helps different
-                              range of transporters manage their operations
-                              like: booking, loading, unloading, delivery, cash
-                              management, reports etc.
-                            </p>
-                            <p>
-                              <b>Tech Stack:</b> Node.js, React, MongoDb, MySql,
-                              Redis, AWS, GitLab.
-                            </p>
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <article
-                      class="resume-timeline-item position-relative pb-5"
-                    >
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            Sr. Developer - NodeJs,
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            Techniexe Infolabs LLP.
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          January 2018 - April 2020
-                        </div>
-                      </div>
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            <p>
-                              Designed and developed REST APIs, Web app for
-                              Social Travel App Yippee. This app is one of its
-                              kind social-travel app solely made for those
-                              who're high on travel, socializing, and life.
-                            </p>
-                            <p>
-                              <b>Tech Stack:</b> Node.js, React, MongoDB, Redis,
-                              Websocket, AWS (Lambda Function, SNS, SQS, S3,
-                              CloudFront, CloudWatch, Route 53, ALB, EC2),
-                              Server side image and video compression.
-                            </p>
-                          </li>
-                          <li>
-                            Designed REST APIs for marketplace based e-commerce
-                            projects. This project includes admin, seller and
-                            buyer panel, support ticket panel, reporting panel
-                            etc.
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <article class="resume-timeline-item position-relative">
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            Software Developer,
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            Sarv Webs Pvt. Ltd
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          March 2015 - January 2018
-                        </div>
-                      </div>
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            <p>
-                              Lead the team of the MTA (Mail Transfer Agent)
-                              project. This project includes MSA (Mail
-                              Submission Agent), Open/Click tracking, Bounce
-                              Processing, IP Warming, Message queue, REST API,
-                              Client Panel, Recurring billing, API
-                              documentation, Wallet system using tools like
-                              WebHooks, WebSocket, Clustered Process, Process
-                              pool, Connection pool, IPC etc.
-                            </p>
-                          </li>
-                          <li>
-                            Lead the team of SMPP (Short Message Peer to Peer)
-                            project. I created a high availability (HA) SMPP
-                            server using Node.js, Redis, RabbitMQ, MongoDB to
-                            receive SMS from clients and submit to SMSC.
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <article
-                      class="resume-timeline-item position-relative pb-5"
-                    >
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            Web Developer,
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            Cyfuture India Pvt. Ltd.
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          September 2013 - March 2015
-                        </div>
-                      </div>
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            Working as a Web Developer I have created CMS for
-                            internal websites. It includes role based permission
-                            like SEO has access to edit meta only, content
-                            writers can edit content only etc. There are many
-                            features including multi language and country wise
-                            language and currency visibility, SEO friendly URLs,
-                            URL rewriting/forwarding, inline editor etc.
-                          </li>
-                          <li>
-                            Created Cloud based file storage and sharing
-                            application called DataBaGG. It has many good
-                            features including auto sync, global access, easy
-                            sharing, files to friends etc.
-                          </li>
-                          <li>
-                            Worked on many large and small projects including
-                            indane.co.in web portal, WHMCS, MIS, Inventory
-                            Portal etc.
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                    <article
-                      class="resume-timeline-item position-relative pb-5"
-                    >
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                          <h3
-                            class="resume-position-title font-weight-bold mb-1"
-                          >
-                            PHP Developer,
-                          </h3>
-                          <div class="resume-company-name ml-2 my-auto">
-                            Xieon Technologies
-                          </div>
-                        </div>
-                        <div class="resume-position-time">
-                          June 2012 - September 2013
-                        </div>
-                      </div>
-                      <div class="resume-timeline-item-desc">
-                        <ul>
-                          <li>
-                            I started my career at this company. Created many
-                            dynamic and static websites, REST APIs including
-                            Zovaitalia Biotech, M2Pharmacy, CadCon project. I
-                            have learned a lot and there has been a great
-                            improvement with my skills.
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-              </section>
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
 
-              <section class="resume-section reference-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Honors & Awards
-                </h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled resume-awards-list">
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        iLead Leadership Learning Certificate
-                      </div>
-                      <div class="resume-degree-org">LTIMindtree</div>
-                      <div class="resume-degree-time">2023</div>
-                    </li>
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
 
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        Business Unit of the Year (Annual Hall of Fame)
-                      </div>
-                      <div class="resume-degree-org">LTI</div>
-                      <div class="resume-degree-time">2022</div>
-                    </li>
+      .hero {
+        min-height: auto;
+      }
 
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        Certificate of Appreciation for outstanding work
-                        delivery by client
-                      </div>
-                      <div class="resume-degree-time">2022</div>
-                    </li>
+      .hero-copy,
+      .panel,
+      .hero-details {
+        padding: 24px;
+      }
 
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        Best Technical Student
-                      </div>
-                      <div class="resume-degree-org">
-                        Poornima Group of Colleges
-                      </div>
-                      <div class="resume-degree-time">2012</div>
-                    </li>
+      .portrait-wrap,
+      .portrait {
+        height: 286px;
+      }
 
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        Best Paper Presentation
-                      </div>
-                      <div class="resume-degree-org">
-                        Poornima Group of Colleges
-                      </div>
-                      <div class="resume-degree-time">2012</div>
-                    </li>
+      .metrics,
+      .impact-grid {
+        grid-template-columns: 1fr;
+      }
 
-                    <li class="mb-2 pl-4 position-relative">
-                      <i
-                        class="resume-award-icon fa fa-trophy position-absolute"
-                        data-fa-transform="shrink-2"
-                      ></i>
-                      <div class="resume-award-name">
-                        Co-author of a Book: Secure Data Communication Using XML
-                        Encryption
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-            <div class="col-lg-3">
-              <section class="resume-section skills-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Skills
-                </h2>
-                <div class="resume-section-content">
-                  <div class="resume-skill-item">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> NodeJs</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> ReactJs</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> JavaScript</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> TypeScript</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> TDD</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> GraphQL</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Elasticsearch</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> MongoDB</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> MySQL</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> PostgreSQL</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Redis</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> RabbitMQ</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Azure</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> AWS</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light">
-                          Serverless Architecture</span
-                        >
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Microcroservices</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> HTML</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> CSS</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> WebHook</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> WebSocket</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> GIT</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Nest Js</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Next Js</span>
-                      </li>
-                      <li class="list-inline-item">
-                        <span class="badge badge-light"> Express Js</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-              <section class="resume-section education-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Education
-                </h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                      <div class="resume-degree font-weight-bold">
-                        M.Tech - Software Engineering
-                      </div>
-                      <div class="resume-degree-org">BITS Pilani (WILP)</div>
-                      <div class="resume-degree-time">2024</div>
-                    </li>
-                    <li>
-                      <div class="resume-degree font-weight-bold">
-                        B.Tech - Information Technology
-                      </div>
-                      <div class="resume-degree-org">RTU Kota</div>
-                      <div class="resume-degree-time">2012</div>
-                    </li>
-                  </ul>
-                </div>
-              </section>
+      .metric {
+        min-height: 112px;
+      }
 
-              <section class="resume-section language-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Strength
-                </h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled resume-lang-list">
-                    <li class="mb-2">
-                      <span class="resume-lang-name font-weight-bold"
-                        >Learning agility</span
-                      >
-                      <small class="text-muted font-weight-normal"
-                        >(Quick learner)</small
-                      >
-                    </li>
-                    <li class="mb-2 align-middle">
-                      <span class="resume-lang-name font-weight-bold"
-                        >Critical thinking</span
-                      >
-                      <small class="text-muted font-weight-normal"
-                        >(Decision making skills)</small
-                      >
-                    </li>
-                    <li>
-                      <span class="resume-lang-name font-weight-bold"
-                        >Creating Ideas</span
-                      >
-                      <small class="text-muted font-weight-normal"
-                        >(Creativity)</small
-                      >
-                    </li>
-                    <li>
-                      <span class="resume-lang-name font-weight-bold"
-                        >Positive Attitude</span
-                      >
-                      <small class="text-muted font-weight-normal"
-                        >(Creating a positive work environment )</small
-                      >
-                    </li>
-                    <li>
-                      <span class="resume-lang-name font-weight-bold"
-                        >Leadership</span
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </section>
-              <section class="resume-section interests-section mb-5">
-                <h2
-                  class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3"
-                >
-                  Interests
-                </h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled">
-                    <li class="mb-1">Guitar</li>
-                    <li class="mb-1">Cooking</li>
-                    <li class="mb-1">Plantation</li>
-                  </ul>
-                </div>
-              </section>
-            </div>
-          </div>
+      .actions {
+        flex-direction: column;
+      }
+
+      .action-link {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="Primary">
+      <a class="brand" href="https://slverma.in/" aria-label="Shambhu Lal Verma home" target="_blank"
+        rel="noopener noreferrer">
+        <span class="brand-mark">SLV</span>
+        <span>Shambhu Lal Verma</span>
+      </a>
+      <div class="nav-links">
+        <a href="#impact">Impact</a>
+        <a href="#experience">Experience</a>
+        <a href="#expertise">Expertise</a>
+        <a href="mailto:developer.sham@gmail.com">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero" aria-label="Profile introduction">
+      <div class="hero-copy">
+        <span class="eyebrow">Bangalore based engineering leader</span>
+        <h1>Shambhu Lal Verma</h1>
+        <p class="headline">
+          Senior Full Stack Developer building reliable product platforms with Node.js, React, TypeScript,
+          microservices, cloud architecture, and pragmatic technical leadership.
+        </p>
+        <div class="actions">
+          <a class="action-link primary" href="mailto:developer.sham@gmail.com">
+            <i class="fa fa-envelope" aria-hidden="true"></i>Email Shambhu
+          </a>
+          <a class="action-link" href="https://www.linkedin.com/in/slverma/" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn
+          </a>
+          <a class="action-link" href="https://github.com/slverma/" target="_blank" rel="noopener noreferrer">
+            <i class="fa fa-github" aria-hidden="true"></i>GitHub
+          </a>
         </div>
       </div>
-    </article>
-  </body>
+
+      <aside class="hero-card" aria-label="Contact details">
+        <div class="portrait-wrap">
+          <img class="portrait" src="assets/image/profile.jpg"
+            alt="Portrait of Shambhu Lal Verma, Senior Full Stack Developer" width="440" height="440" />
+        </div>
+        <div class="hero-details">
+          <p class="role">Senior Full Stack Developer</p>
+          <ul class="contact-list">
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>Bangalore, India</li>
+            <li><i class="fa fa-graduation-cap" aria-hidden="true"></i>M.Tech, Software Engineering</li>
+            <li><i class="fa fa-code" aria-hidden="true"></i>Node.js, React, TypeScript, Cloud</li>
+          </ul>
+          <ul class="socials" aria-label="Social links">
+            <li><a class="social-link" href="https://www.linkedin.com/in/slverma/" aria-label="LinkedIn"
+                target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a class="social-link" href="https://github.com/slverma/" aria-label="GitHub" target="_blank"
+                rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            <li><a class="social-link" href="https://twitter.com/vermaslal" aria-label="Twitter" target="_blank"
+                rel="noopener noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metrics" aria-label="Career highlights">
+      <div class="metric">
+        <strong>13+</strong>
+        <span>years building web platforms and engineering teams</span>
+      </div>
+      <div class="metric">
+        <strong>10k+</strong>
+        <span>users served by scalable microservice architecture</span>
+      </div>
+      <div class="metric">
+        <strong>1M+</strong>
+        <span>daily GraphQL API requests supported and optimized</span>
+      </div>
+      <div class="metric">
+        <strong>60%</strong>
+        <span>deployment time reduction through CI/CD improvements</span>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <div class="main-stack">
+        <section class="panel" id="impact">
+          <p class="section-kicker">Profile</p>
+          <h2>Engineering useful systems from idea to production.</h2>
+          <div class="summary">
+            <p>
+              I am a full stack engineer and technical lead with deep experience across product platforms,
+              data-heavy APIs, cloud services, real-time systems, and high-availability backends. My work spans
+              incident management, telematics, logistics ERP, social travel, messaging infrastructure, and
+              marketplace systems.
+            </p>
+            <ul class="focus-list">
+              <li><i class="fa fa-check" aria-hidden="true"></i><span>Own architecture, delivery, performance, and
+                  user experience from concept through release.</span></li>
+              <li><i class="fa fa-check" aria-hidden="true"></i><span>Translate ambiguous business problems into
+                  maintainable engineering plans.</span></li>
+              <li><i class="fa fa-check" aria-hidden="true"></i><span>Mentor teams while keeping implementation
+                  practical, observable, and scalable.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="section-kicker">Selected impact</p>
+          <h2>Where the work has moved numbers.</h2>
+          <div class="impact-grid">
+            <article class="impact-card">
+              <span class="impact-icon"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+              <h3>AI incident management</h3>
+              <p>Led a machine learning and generative AI application that improved operational efficiency by 35% and
+                reduced incident response time by 50%.</p>
+            </article>
+            <article class="impact-card">
+              <span class="impact-icon"><i class="fa fa-truck" aria-hidden="true"></i></span>
+              <h3>Telematics platform</h3>
+              <p>Built GraphQL APIs, real-time tracking, and database optimizations for an enterprise fleet management
+                platform.</p>
+            </article>
+            <article class="impact-card">
+              <span class="impact-icon"><i class="fa fa-sitemap" aria-hidden="true"></i></span>
+              <h3>Logistics ERP</h3>
+              <p>Led a six-developer team delivering booking, tracking, cash management, reporting, and automation
+                modules for transportation companies.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" id="experience">
+          <p class="section-kicker">Experience</p>
+          <h2>Recent roles and delivery history.</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <div>
+                <h3>Sr. Specialist - Software Engineering</h3>
+                <div class="timeline-meta"><span class="company">LTIMindtree</span><span>September 2021 - Present</span>
+                </div>
+              </div>
+              <p>Lead developer for AI-enabled incident management and senior full stack developer for enterprise
+                telematics. Delivered scalable services, dashboards, CI/CD pipelines, cloud integrations, and real-time
+                application capabilities.</p>
+              <div class="stack-line">
+                <span class="chip teal">Node.js</span><span class="chip teal">React</span><span
+                  class="chip teal">TypeScript</span><span class="chip">GraphQL</span><span class="chip">Azure</span>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div>
+                <h3>Project Lead - Full Stack Developer</h3>
+                <div class="timeline-meta"><span class="company">Kabra Logitech Pvt. Ltd.</span><span>April 2020 -
+                    September 2021</span></div>
+              </div>
+              <p>Led delivery of a logistics ERP platform with booking management, vehicle tracking, financial
+                reporting, real-time cash management, and REST APIs handling high-volume daily transactions.</p>
+              <div class="stack-line">
+                <span class="chip teal">Node.js</span><span class="chip teal">React</span><span
+                  class="chip">MongoDB</span><span class="chip">MySQL</span><span class="chip">AWS</span>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div>
+                <h3>Senior Developer - Node.js</h3>
+                <div class="timeline-meta"><span class="company">Techniexe Infolabs LLP.</span><span>January 2018 -
+                    April 2020</span></div>
+              </div>
+              <p>Designed REST APIs and React applications for social travel and marketplace commerce products,
+                including real-time features, media processing, and AWS serverless services.</p>
+              <div class="stack-line">
+                <span class="chip teal">Node.js</span><span class="chip teal">React</span><span
+                  class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">AWS Lambda</span>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div>
+                <h3>Software Developer</h3>
+                <div class="timeline-meta"><span class="company">Sarv Webs Pvt. Ltd.</span><span>March 2015 - January
+                    2018</span></div>
+              </div>
+              <p>Led mail transfer and SMPP messaging projects involving high-availability services, queueing,
+                tracking, billing, APIs, dashboards, clustered workers, and client-facing panels.</p>
+              <div class="stack-line">
+                <span class="chip teal">Node.js</span><span class="chip">Redis</span><span
+                  class="chip">RabbitMQ</span><span class="chip">MongoDB</span><span class="chip">WebSocket</span>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div>
+                <h3>Web Developer</h3>
+                <div class="timeline-meta"><span class="company">Cyfuture India Pvt. Ltd.</span><span>September 2013 -
+                    March 2015</span></div>
+              </div>
+              <p>Built CMS, storage, inventory, MIS, WHMCS, and web portal systems with role-based editing, multilingual
+                content, SEO-friendly URLs, and file-sharing workflows.</p>
+            </article>
+
+            <article class="timeline-item">
+              <div>
+                <h3>PHP Developer</h3>
+                <div class="timeline-meta"><span class="company">Xieon Technologies</span><span>June 2012 - September
+                    2013</span></div>
+              </div>
+              <p>Started professional development career building dynamic websites, static sites, and REST APIs for
+                client projects.</p>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-stack">
+        <section class="panel" id="expertise">
+          <p class="section-kicker">Expertise</p>
+          <h2>Technical toolkit.</h2>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="chips">
+              <span class="chip teal">JavaScript</span><span class="chip teal">TypeScript</span><span
+                class="chip">Node.js</span><span class="chip">HTML5</span><span class="chip">CSS3</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <div class="chips">
+              <span class="chip teal">React.js</span><span class="chip teal">Next.js</span><span
+                class="chip">Ant Design</span><span class="chip">Responsive UI</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="chips">
+              <span class="chip teal">Express.js</span><span class="chip">Nest.js</span><span
+                class="chip">GraphQL</span><span class="chip">REST APIs</span><span class="chip">Microservices</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data and cloud</h3>
+            <div class="chips">
+              <span class="chip teal">MongoDB</span><span class="chip">PostgreSQL</span><span
+                class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">AWS</span><span
+                class="chip">Azure</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="section-kicker">Education</p>
+          <h2>Academic base.</h2>
+          <ul class="clean-list">
+            <li>
+              <span class="item-title">M.Tech - Software Engineering</span>
+              <span class="item-meta">BITS Pilani, Work Integrated Learning Programme - 2024</span>
+            </li>
+            <li>
+              <span class="item-title">B.Tech - Information Technology</span>
+              <span class="item-meta">Rajasthan Technical University, Kota - 2012</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <p class="section-kicker">Recognition</p>
+          <h2>Honors and awards.</h2>
+          <ul class="clean-list">
+            <li>
+              <span class="item-title">iLead Leadership Learning Certificate</span>
+              <span class="item-meta">LTIMindtree - 2023</span>
+            </li>
+            <li>
+              <span class="item-title">Business Unit of the Year</span>
+              <span class="item-meta">LTI Annual Hall of Fame - 2022</span>
+            </li>
+            <li>
+              <span class="item-title">Outstanding Work Delivery</span>
+              <span class="item-meta">Client appreciation - 2022</span>
+            </li>
+            <li>
+              <span class="item-title">Best Technical Student</span>
+              <span class="item-meta">Poornima Group of Colleges - 2012</span>
+            </li>
+            <li>
+              <span class="item-title">Secure Data Communication Using XML Encryption</span>
+              <span class="item-meta">Published research, co-author</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <p class="section-kicker">Strengths</p>
+          <h2>How I work.</h2>
+          <ul class="clean-list strength-list">
+            <li><i class="fa fa-lightbulb-o" aria-hidden="true"></i><span><span class="item-title">Learning
+                  agility</span><span class="item-meta">Fast adoption of new technologies and frameworks.</span></span>
+            </li>
+            <li><i class="fa fa-cogs" aria-hidden="true"></i><span><span class="item-title">Critical
+                  thinking</span><span class="item-meta">Structured problem solving and clear technical
+                  decisions.</span></span></li>
+            <li><i class="fa fa-users" aria-hidden="true"></i><span><span class="item-title">Technical
+                  leadership</span><span class="item-meta">Mentoring teams and aligning delivery with product
+                  outcomes.</span></span></li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <p class="section-kicker">Outside code</p>
+          <h2>Interests.</h2>
+          <div class="chips">
+            <span class="chip"><i class="fa fa-music" aria-hidden="true"></i>&nbsp;Guitar</span>
+            <span class="chip"><i class="fa fa-cutlery" aria-hidden="true"></i>&nbsp;Culinary arts</span>
+            <span class="chip"><i class="fa fa-leaf" aria-hidden="true"></i>&nbsp;Gardening</span>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <span>Senior Full Stack Developer - Bangalore, India</span>
+      <a href="mailto:developer.sham@gmail.com">developer.sham@gmail.com</a>
+    </footer>
+  </main>
+</body>
+
 </html>
